@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta name="description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://berobla.com">
+  <meta property="og:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta property="og:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="og:image" content="https://berobla.com/galeria/nebula.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://berobla.com">
+  <meta property="twitter:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta property="twitter:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="twitter:image" content="https://berobla.com/galeria/nebula.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="icon" href="/galeria/icono.webp" type="image/webp">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/index.js" defer></script>
+  <title>Demo Nebula</title>
+</head>
+<!--
+Descripción: Este archivo HTML contiene la página inicial de la demo del programa para gestión de proyectos
+
+Estructura general:
+- Encabezado
+- Barra de navegación
+- Contenido principal 
+    - Card de tarea
+    - Sistema en rotación
+-->
+<body>
+    <!--
+    Sección de navegación
+    -->
+    <nav class="nav__list">
+      <div class="nav__list-left">
+        <a title="Enlace vacio" href="#" class="nav__link active">Mi sistema</a>
+        <a title="Pagina tareas"  href="/html/tareas.html" class="nav__link">Gestionar órbita</a>
+      </div>
+    </nav>
+
+    <main class="main__demo">
+      <div class="espacio">
+        <div class="card__main">
+          <div class="card__icono">
+            <picture>
+              <source srcset="/galeria/icono.webp" type="image/webp">
+              <source srcset="/galeria/icono.png" type="image/png">
+              <img src="/galeria/icono.png" alt="Miniatura planeta" loading="lazy">
+            </picture>
+          </div>
+          <button class="card__cerrar">
+            <picture>
+              <source srcset="/galeria/flecha.webp" type="image/webp">
+              <source srcset="/galeria/flecha.png" type="image/png">
+              <img src="/galeria/flecha.png" alt="Icono cerrar" loading="lazy">
+            </picture>
+          </button>
+          <div class="card__header">Corregir bug en el inicio de sesión</div>
+          <div class="card__tasks">
+            <div class="task">
+              <input type="checkbox" class="task__checkbox">
+              <div class="task__text">
+                Usuarios no pueden acceder con Google
+              </div>
+            </div>
+            <div class="task">
+              <input type="checkbox" class="task__checkbox" >
+              <div class="task__text">
+                Revisar logs de errores en el servidor
+              </div>
+            </div>
+            <div class="task">
+              <input type="checkbox" class="task__checkbox">
+              <div class="task__text">Validar tokens y permisos en la API</div>
+            </div>
+          </div>
+          <button class="btn btn--add" id="btnAdd">
+            <picture>
+              <source srcset="/galeria/btn__add-icon.webp" type="image/webp">
+              <source srcset="/galeria/btn__add-icon.png" type="image/png">
+              <img src="/galeria/btn__add-icon.png" alt="Icono añadir" class="btn__add-icon" loading="lazy">
+            </picture>
+          </button>
+          <div class="card__footer">
+            <div class="card__date">
+              <p class="card__date-text">Abril, 25</p>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        Sección principal con los planetas en órbita
+        Descripción: Esta parte se divide de manera que las órbitas giren alrededor del elemento central (el sol)
+        que representa el proyecto.
+        -->
+        <div class="sistema">
+          <!--Sección para el sol-->
+          <div class="centro">
+            <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-marron.jpg" class="planet__video">
+              <source src="/galeria/planetas/planeta-marron.webm" type="video/webm">
+              <source src="/galeria/planetas/planeta-marron.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!--Sección órbitas-->
+
+          <!--Sección primera órbita-->
+          <div class="orbita orbita-a">
+            <div class="planet planet-a">
+              <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="planet__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+              <!--Sección tarea urgente
+              Descripción: Contenedor absolute para que el planeta xs orbite sobre su tarea principa.
+              -->
+              <div class="planet-xs">
+                <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rojo.jpg">
+                  <source src="/galeria/planetas/planeta-rojo.webm" type="video/webm">
+                  <source src="/galeria/planetas/planeta-rojo.mp4" type="video/mp4">
+                </video>
+              </div>
+              <!--Sección para la card correspondiente a su órbita-->
+              <div class="card-wrapper a">
+                <div class="card__simple">
+                  <div class="card__header">Revisar login</div>
+                  <div class="card__footer">
+                    <div class="card__date">
+                      <p class="card__date-text">Abril, 25</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Sección segunda órbita-->          
+          <div class="orbita orbita-b">
+            <div class="planet planet-b">
+              <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="planet__video">
+                <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+              </video>
+              <!--Sección para la card correspondiente a su órbita-->
+              <div class="card-wrapper b">
+                <div class="card__simple">
+                  <div class="card__header">Realizar user testing</div>
+                  <div class="card__footer">
+                    <div class="card__date">
+                      <p class="card__date-text">Abril, 25</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Sección tercera órbita-->
+          <div class="orbita orbita-c">
+            <div class="planet planet-c">
+              <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-gris.jpg" class="planet__video">
+                <source src="/galeria/planetas/planeta-gris.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-gris.mp4" type="video/mp4">
+              </video>
+              <!--Sección para la card correspondiente a su órbita-->
+              <div class="card-wrapper c">
+                <div class="card__simple">
+                  <div class="card__header">Arquitectura de información</div>
+                  <div class="card__footer">
+                    <div class="card__date">
+                      <p class="card__date-text">Abril, 25</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Sección cuarta órbita-->
+          <div class="orbita orbita-d">
+            <div class="planet planet-d">
+              <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="planet__video">
+                <source src="/galeria/planetas/planeta-burd.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-burd.mp4" type="video/mp4">
+              </video>
+              <!--Sección para la card correspondiente a su órbita-->
+              <div class="card-wrapper d">
+                <div class="card__simple">
+                  <div class="card__header">Crear logo</div>
+                  <div class="card__footer">
+                    <div class="card__date">
+                      <p class="card__date-text">Abril, 25</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--Sección para volver al index.html-->
+      <div class="main__footer demo">
+        <a title="Pagina inicio" href="/index.html" class="main__footer-button">Vuelve al inicio</a>
+
+      </div>
+    </main>
+  </body>
+</html>

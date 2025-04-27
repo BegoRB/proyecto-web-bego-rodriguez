@@ -1,0 +1,1397 @@
+:root {
+  /* TIPOGRAFIA */
+  --font-primary: "Lato";
+  --font-secondary: "Poppins";
+
+  /* ESTILO TIPOGRAFIA */
+  --font-size-xl: 3rem;
+  --font-size-lg: 2rem;
+  --font-size-md: 1.5rem;
+  --font-size-s: 1.25rem;
+  --font-size-base: 1rem;
+  --font-size-xs: 0.75rem;
+}
+:root {
+  /* WEIGHT */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-regular: 400;
+}
+
+:root {
+  /* COLORES */
+  --texto-base: rgb(0, 0, 0);
+  --texto-claro: rgb(255, 255, 255);
+  --texto-gris: rgb(153, 153, 153);
+
+  --color-blanco: rgb(255, 255, 255);
+  --color-claro: rgb(240, 255, 255);
+  --color-oscuro: rgb(4, 4, 4);
+}
+
+:root {
+  /* BOTONES */
+  --color-btn-add: #826270;
+  --color-btn-add-hover: #8f375f;
+  --color-btn-estado: #00576f;
+  --color-btn-estado-bg: #dff1ff;
+  --color-btn-priority: #5a5a5a;
+  --color-btn-priority-bg: #ededed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/galeria/estrellas.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(4, 4, 4);
+}
+
+/*  PÁGINA TAREAS *\
+tareas.html
+
+- Navegación
+- Elemento central
+- Frames
+- Footer
+- Animaciones
+ */
+
+/*  NAVEGACIÓN PRINCIPAL
+
+Estructura:
+- .nav__list 
+-.nav__list-left 
+- .nav__link 
+- nav img 
+*/
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  padding: 0px 90px;
+}
+
+.nav__list-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.nav__link {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-family: var(--font-primary);
+
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  font-weight: 600;
+  transform: scale(1.02);
+}
+
+nav img {
+  height: 32px;
+}
+/*  NAVEGACIÓN PRINCIPAL  */
+
+/*_ TAREAS
+    -gestion
+    -tareas
+    -tareas__principal
+    -tareas__principal--header
+    -new-tarea 
+    -tareas__principal--header-nav
+    -tareas__principal--contenedor 
+    -tareas__principal--contenedor-tabla
+    -icono
+    -icono-tarea
+*/
+
+.gestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tareas {
+  background-color: white;
+  margin: 6.25rem;
+  display: flex;
+  flex-direction: row;
+  border: solid 0.08rem #d4d4d4;
+  border-radius: 1.25rem;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.tareas__principal {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tareas__principal--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-primary);
+  gap: 1.875rem;
+  padding: 1.875rem 1.875rem;
+  border-bottom: solid 0.08rem #d4d4d4;
+}
+
+.new-tarea {
+  display: flex;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+.tareas__principal--header-nav {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-size-base);
+}
+
+.tareas__principal--header-nav span {
+  margin-right: 5.625rem;
+}
+
+.tareas__nav {
+  width: 3.75rem;
+  padding: 2.5rem 1.25rem;
+  border-right: solid 0.08rem #d4d4d4;
+}
+
+.tareas__nav--btn {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.tareas__nav--btn-menu {
+  width: 30px;
+  left: 0;
+  right: 0;
+}
+
+.tareas__principal--contenedor {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.tareas__principal--contenedor-tabla {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.25rem;
+}
+
+.icono {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.icono-tarea {
+  object-fit: contain;
+  margin-right: 0.625rem;
+}
+
+.icono-tarea__img {
+  width: 90px;
+}
+
+/* _ TAREAS _*/
+
+/* _ TABLA ESTRUCTURA _*/
+/*
+Estructura:
+- tabla
+- tabla tr
+- tabla thead
+- tabla th
+- tabla td
+- tabla__header.primera
+- tabla__cell.primera
+- tabla__header.segunda
+- tabla__cell.segunda
+- tabla__cell.descr
+- tabla__cell.fecha
+- tabla__cell.editar
+- tabla__cell.editar img
+- icono-delete
+- tfoot
+
+*/
+.tabla {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 0.08rem #d4d4d4;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  font-family: var(--font-secondary);
+}
+
+.tabla tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blanco);
+  width: 100%;
+  border-bottom: solid 0.5px #e4e4e4;
+}
+
+.tabla thead {
+  width: 100%;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-s);
+}
+
+.tabla th {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: start;
+  align-items: center;
+  padding: 1.875rem 1.25rem;
+}
+
+.tabla td {
+  padding: 1rem 1.25rem;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+}
+
+.tabla__header.primera {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.tabla__cell.primera {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabla__conf ul {
+  position: absolute;
+  visibility: hidden;
+
+  width: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  gap: 0.625rem;
+  padding: 0.625rem 0.5rem;
+
+  background-color: var(--color-blanco);
+  border: solid 1px rgb(231, 231, 231);
+  border-radius: 0.625rem;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.tabla__conf ul li {
+  display: flex;
+}
+
+.tabla__conf ul li button {
+  background: none;
+  border: none;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+.primera-conf-lista.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tabla__header.segunda,
+.tabla__cell.segunda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.tabla__cell.descr {
+  margin: 0 0 0 1.25rem;
+  border: 0;
+  width: 100%;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: #000000;
+}
+
+.tabla__cell.fecha {
+  border: none;
+  font-family: var(--font-secondary);
+  max-width: 90%;
+}
+
+tfoot .tabla__row {
+  display: flex;
+  justify-content: start;
+}
+
+.tabla__cell-foot--btn button {
+  background: none;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xs);
+  color: var(--texto-gris);
+  cursor: pointer;
+}
+
+.tabla__cell.editar {
+  display: flex;
+  cursor: pointer;
+}
+
+.tabla__cell.editar button {
+  background: none;
+  border: none;
+}
+
+.tabla__cell.editar img {
+  width: 20px;
+  margin: 0rem 0.5rem;
+}
+
+.icono-delete {
+  visibility: hidden;
+  cursor: pointer;
+}
+/* _ TABLA ESTRUCTURA _*/
+
+/* _CARD_ */
+/* 
+Estructura: 
+- card__main
+- card__cerrar
+- card__cerrar img
+- card__icono
+- card__icono img
+- card__header
+- card__footer
+- card__tasks
+- task
+*/
+
+.card__main {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+
+  max-width: 400px;
+  background-color: var(--color-blanco);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3.75rem 2.5rem 1.25rem 2.5rem;
+
+  gap: 1.5625rem;
+  border-radius: 0.75rem;
+  margin: 5.625rem;
+  z-index: 2;
+  right: 0;
+
+  top: -90px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.card__main.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.card__cerrar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  margin-left: 1.25rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.card__cerrar img {
+  width: 15px;
+  transform: rotate(90deg);
+}
+
+.card__icono {
+  height: 80px;
+  position: absolute;
+  top: -40px;
+}
+
+.card__icono img {
+  height: 100%;
+}
+
+.card__header {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-s);
+  align-self: start;
+}
+
+.card__footer {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  padding-top: 0.5rem;
+  border-top: dotted 1px #a0a0a0;
+}
+
+.card__date {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.card__date p {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xs);
+  color: rgb(187, 187, 187);
+}
+
+.card__tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.task__text {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+}
+/* _CARD_ */
+
+/* _ BOTONES  */
+/* 
+Estructura
+    - btn--add
+    - btn--add:hover
+    - btn--add:active
+    - btn.btn--priority.select-estado
+    - btn.btn--priority.select-prioridad
+    - btn--priority
+*/
+
+.btn--add {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-btn-add);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn--add:hover {
+  background-color: var(--color-btn-add-hover);
+}
+
+.btn--add:active {
+  transform: scale(0.9);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn--priority.select-estado {
+  color: var(--color-btn-estado);
+  background-color: var(--color-btn-estado-bg);
+}
+
+.btn.btn--priority.select-prioridad {
+  color: var(--color-btn-priority);
+  background-color: var(--color-btn-priority-bg);
+}
+
+.btn--priority {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-items: center;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+/* _ ESPACIO 3D */
+/* 
+Estructura general
+    - espacio
+    - sistema
+    - centro
+    - centro video
+    - orbita
+        - planet
+        -card__wrapper
+    - planet-xs
+    - card__simple
+    - main__footer
+    - @keyframes
+*/
+
+.espacio {
+  perspective: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  padding: 0 5.625rem;
+  padding-bottom: 0;
+}
+
+.sistema {
+  top: 100px;
+  position: relative;
+  left: 100px;
+
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+.centro {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0);
+  z-index: 1;
+
+  top: 150px;
+  left: -90px;
+}
+
+.centro .planet__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  filter: brightness(1.2) contrast(1.3) saturate(2) hue-rotate(30deg);
+}
+
+/* PLANETAS/ÓRBITAS  */
+
+.orbita {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  transform-style: preserve-3d;
+}
+
+.planet {
+  cursor: pointer;
+  top: 10px;
+  background: none;
+  border: none;
+}
+
+.planet__video {
+  width: 100%;
+}
+
+.orbita-a {
+  transform: skew(15deg, -15deg);
+}
+.planet-a {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.planet-a .planet__video {
+  position: relative;
+  width: 250px;
+}
+
+.card-wrapper.a {
+  transform: skew(-15deg, 15deg);
+  position: absolute;
+}
+
+.orbita-b {
+  top: -100px;
+  transform: skew(12deg, -12deg);
+}
+.planet-b {
+  width: 100%;
+  position: relative;
+  left: -60px;
+}
+.planet-b .planet__video {
+  position: relative;
+  width: 220px;
+}
+
+.card-wrapper.b {
+  transform: skew(-12deg, 12deg);
+  position: absolute;
+}
+
+.orbita-c {
+  transform: skew(20deg, -20deg);
+  left: -100px;
+  top: -400px;
+}
+.planet-c {
+  width: 100%;
+  position: relative;
+  left: -90px;
+}
+
+.planet-c .planet__video {
+  position: relative;
+  width: 250px;
+}
+
+.card-wrapper.c {
+  transform: skew(-20deg, 20deg);
+  position: absolute;
+}
+
+.orbita-d {
+  transform: skew(15deg, -15deg);
+  bottom: 300px;
+}
+.planet-d {
+  width: 100%;
+  position: relative;
+  left: -90px;
+}
+
+.planet-d .planet__video {
+  position: relative;
+  width: 300px;
+}
+
+.card-wrapper.d {
+  transform: skew(-15deg, 15deg);
+  position: absolute;
+}
+
+.planet-xs {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -100px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0px -6px 30px rgb(255, 0, 21);
+  animation: zoom 2s ease-in-out infinite alternate;
+}
+
+.planet-xs video {
+  width: 50px;
+  height: 50px;
+  transform: translate(-20%, -20%);
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  box-shadow: 0 0 30px rgba(255, 0, 21, 0.117);
+  filter: saturate(2);
+}
+
+.card__simple {
+  height: fit-content;
+  min-width: 200px;
+  max-width: 400px;
+
+  background-color: var(--color-blanco);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+
+  padding: 1.5625rem 1.5625rem;
+
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.card__simple.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+.main__footer {
+  padding: 5.625rem 5.625rem;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__footer.demo {
+  height: 100px;
+  top: -90px;
+  padding: 0;
+  margin-bottom: 5.625rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__footer a {
+  text-decoration: none;
+  color: rgb(240, 255, 255);
+}
+
+.main__footer-button {
+  position: relative;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+  padding: 10px 30px;
+  text-decoration: none;
+  color: var(--color-claro);
+  background: linear-gradient(45deg, #0d0f70, #180342, #203a5c, #092952);
+  background-size: 300% 300%;
+  animation: mover-gradient 6s ease-in-out infinite;
+  border: none;
+  border-radius: 80px;
+  transition: box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.main__footer-button:hover {
+  box-shadow: 0px 0px 50px 2px rgba(255, 255, 255, 0.363);
+  border: none;
+}
+
+@keyframes zoom {
+  0% {
+    transform: translate(0%, -200%) scale(1);
+  }
+  100% {
+    transform: translate(0%, -200%) scale(1.2);
+  }
+}
+
+@keyframes mover-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ESPACIO 3D  */
+
+/*   PRESENTACIÓN PROYECTO  *\
+detalles-proyecto.html
+
+- Navegación
+- Contenedores
+- Carrusel
+
+/* NAVEGACIÓN PRINCIPAL */
+
+.nav__list-global {
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 5.625rem;
+  background: linear-gradient(180deg, #000000, #000000c3, #0000008c, #00000000);
+}
+
+/* CONTENEDORES */
+
+.contenedor__descr,
+.contenedor__pestana {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+
+  padding: 5.625rem;
+  gap: 5.625rem;
+}
+
+.contenedor__descr--left {
+  width: 100%;
+  gap: 5.625rem;
+}
+
+.contenedor__descr--left-titulo {
+  color: var(--texto-claro);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xl);
+}
+
+.contenedor__descr-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.25rem;
+  gap: 1.875rem;
+}
+
+.contenedor__descr-texto,
+.contenedor__pestana-texto {
+  color: var(--texto-claro);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-md);
+}
+
+.contenedor__descr--left-content {
+  width: 80%;
+  color: var(--texto-claro);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-s);
+}
+
+/* CONTENEDORES*/
+
+.contenedor__pestana-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 50%;
+}
+
+.contenedor__descr--left-subtitulo {
+  color: var(--texto-claro);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-lg);
+}
+
+.contenedor__pestana-left-button {
+  background-color: #6f61b7;
+  color: var(--texto-claro);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.3125rem;
+  border: none;
+  margin: 0.625rem 0;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.contenedor__pestana-left-button:hover {
+  background-color: #4c449f;
+}
+
+.contenedor__pestana-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pestana {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.item-pestana {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transition: all 0.8s ease;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.item-pestana video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.item-pestana--sol video {
+  filter: brightness(1.2) contrast(1) saturate(2) hue-rotate(30deg);
+}
+
+.item-pestana--urgente-enf {
+  opacity: 0.3;
+}
+
+.item-pestana .planet-xs {
+  position: relative;
+  overflow: visible;
+  box-shadow: none;
+  top: -150px;
+}
+
+.item-pestana .planet-xs video {
+  position: absolute;
+  width: 200px;
+  left: 100px;
+  top: 15px;
+  object-fit: contain;
+}
+
+.item-pestana--urgente,
+.item-pestana--sol,
+.item-pestana--planeta {
+  opacity: 0;
+}
+
+/* MEDIA QUERIES  */
+
+@media (min-width: 1025px) {
+  .item-pestana .planet-xs {
+    position: relative;
+    overflow: visible;
+    width: 70px;
+    height: 70px;
+    top: -200px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contenedor__descr,
+  .contenedor__pestana {
+    height: 100%;
+    padding: 0 5.625rem;
+    gap: 0;
+  }
+
+  .contenedor__pestana {
+    margin-top: 200px;
+  }
+
+  .contenedor__descr--left-titulo {
+    font-size: var(--font-size-lg);
+  }
+
+  .contenedor__descr-right {
+    font-size: var(--font-size-md);
+    padding: 0;
+    text-align: justify;
+  }
+
+  .tareas {
+    width: 90%;
+    margin: 0;
+  }
+
+  .tareas__principal {
+    width: 90%;
+  }
+
+  .tareas__principal--header {
+    width: 100%;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .tareas__principal--contenedor {
+    width: 100%;
+    padding: 0;
+  }
+
+  .tabla__header {
+    font-size: var(--font-size-base);
+    text-align: left;
+  }
+
+  .tabla__cell.primera {
+    font-size: var(--font-size-xs);
+  }
+
+  .icono-tarea__img {
+    width: 40px;
+  }
+
+  .tabla__cell.editar img {
+    width: 15px;
+    margin: 6px;
+  }
+
+  .tabla__cell.descr {
+    margin: 0 0 0 0.5rem;
+    border: 0;
+    width: 100%;
+    font-size: var(--font-size-base);
+  }
+
+  .tabla__conf ul {
+    width: 150px;
+  }
+
+  .item-pestana .planet-xs {
+    width: 40px;
+    height: 40px;
+    top: -100px;
+  }
+
+  .item-pestana .planet-xs video {
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor__descr,
+  .contenedor__pestana {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem 5.625rem;
+  }
+
+  .contenedor__pestana {
+    margin-top: 90px;
+    flex-direction: column;
+  }
+
+  .contenedor__pestana-left,
+  .contenedor__pestana-right {
+    width: 100%;
+  }
+
+  .contenedor__pestana-right {
+    height: 300px;
+  }
+
+  .contenedor__descr--left-titulo {
+    font-size: var(--font-size-md);
+  }
+
+  .contenedor__descr--left-subtitulo {
+    font-size: var(--font-size-md);
+  }
+
+  .contenedor__descr-texto,
+  .contenedor__descr--left-content {
+    font-size: var(--font-size-base);
+    padding: 0;
+    text-align: justify;
+  }
+
+  .contenedor__pestana-left-button {
+    font-size: var(--font-size-xs);
+  }
+
+  .item-pestana .planet-xs {
+    top: -100px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .item-pestana .planet-xs video {
+    width: 90px;
+  }
+
+  .tabla__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    padding: 0.625rem;
+  }
+
+  .tabla__cell.primera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
+  }
+
+  .tabla__cell.primera .tabla__cell.editar {
+    flex: 1 1 calc(10% - 10px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .tabla__cell.primera .tabla__cell.descr {
+    flex: 1 1 calc(75% - 10px);
+    margin: 0;
+    padding: 0;
+  }
+
+  .tabla__cell.segunda {
+    flex: 1 1 calc(25% - 10px);
+    min-width: 120px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tabla__cell.segunda select,
+  .tabla__cell.segunda input {
+    width: 100%;
+  }
+
+  .icono-tarea {
+    display: none;
+  }
+
+  .tareas__principal {
+    width: 100%;
+  }
+
+  .tareas__principal--header {
+    width: 85%;
+  }
+
+  .tabla td {
+    padding: 0rem;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-base);
+  }
+  .tabla tr {
+    padding: 0.75rem 0.625rem;
+  }
+
+  .main__footer {
+    padding: 1.25rem 1.25rem 5.625rem;
+  }
+
+  .main__footer-button {
+    font-size: var(--font-size-xs);
+  }
+
+  .main__demo {
+    overflow: hidden;
+  }
+
+  .planet-c {
+    top: 200px;
+    left: 0px;
+  }
+
+  .card__main {
+    top: 100px;
+    margin: 0;
+    left: 60px;
+  }
+
+  .planet {
+    left: -30px;
+  }
+
+  .centro .planet__video {
+    width: 300px;
+  }
+
+  .planet .planet__video {
+    width: 200px;
+  }
+
+  .orbita {
+    left: -90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor__descr,
+  .contenedor__pestana {
+    padding: 1.25rem 2.5rem;
+  }
+
+  .contenedor__descr--left-botones,
+  .contenedor__descr--left-content {
+    gap: 0.625rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contenedor__descr--left-titulo,
+  .contenedor__descr--left-subtitulo {
+    text-align: center;
+  }
+
+  .contenedor__pestana-left-button {
+    font-size: var(--font-size-xs);
+  }
+
+  .main__footer {
+    padding: 1.25rem 0.625rem 4.375rem;
+  }
+
+  .card__main {
+    top: 100px;
+    margin: 0;
+    left: 20px;
+}
+
+  .card__main.visible {
+    width: fit-content;
+    padding: 3.75rem 1.25rem 1.25rem 1.25rem;
+  }
+
+  .card__header {
+    font-size: var(--font-size-base);
+  }
+
+  .task__text {
+    font-size: var(--font-size-xs);
+  }
+
+  .nav__list {
+    padding: 0 0 0 2.5rem;
+  }
+  .nav__link {
+    font-size: var(--font-size-xs);
+  }
+
+  .tabla tr {
+    justify-content: start;
+  }
+
+  .tabla tr {
+    justify-content: start;
+  }
+
+  .tareas__principal--contenedor-tabla {
+    padding: 0px;
+  }
+
+  .tareas__principal--header-titulo {
+    font-size: var(--font-size-s);
+  }
+
+  .new-tarea {
+    font-size: var(--font-size-xs);
+  }
+
+  .primera-conf-lista {
+    top: 70px;
+    left: 70px;
+  }
+
+  .btn--priority {
+    font-size: 10em;
+    width: 30px;
+    padding: 0.375rem 0.5rem;
+  }
+
+  .tabla__cell.segunda {
+    min-width: 100px;
+  }
+
+  .tabla__cell.segunda select {
+    width: 100px;
+  }
+
+  .tabla__header.primera {
+    width: 100%;
+  }
+
+  .tabla__header.segunda {
+    display: none;
+  }
+
+  .tabla__cell.segunda {
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn.btn--priority {
+    font-size: var(--font-size-xs);
+  }
+
+  .item-pestana .planet-xs {
+    top: -100px;
+    width: 60px;
+  }
+
+  .item-pestana .planet-xs video {
+    width: 100%;
+    left: 40px;
+  }
+}

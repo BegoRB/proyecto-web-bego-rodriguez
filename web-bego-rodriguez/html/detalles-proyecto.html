@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+    <meta name="description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://berobla.com">
+    <meta property="og:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+    <meta property="og:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+    <meta property="og:image" content="https://berobla.com/galeria/nebula.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://berobla.com">
+    <meta property="twitter:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+    <meta property="twitter:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+    <meta property="twitter:image" content="https://berobla.com/galeria/nebula.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="icon" href="/galeria/icono.webp" type="image/webp">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="/js/index.js" defer></script>
+    <title>Conoce el Proyecto</title>
+  </head>
+  <!--
+Descripción: Este archivo HTML contiene la página de presentación del sistema de gestión de tareas.
+
+Estructura general:
+- Encabezado
+- Barra de navegación
+- Contenido principal 
+    - Titulo + Descripcion
+    - Tarjetas de elemento + pestana
+-->
+  <body>
+
+    <!--
+    Sección de navegación
+    -->
+      <nav class="nav__list-global">
+        <div class="nav__list-left">
+          <a title="Enlace inicio" href="/index.html" class="nav__link">Inicio</a>
+          <a title="Enlace vacio" href="#" class="nav__link active">Conoce el proyecto</a>
+        </div>
+      </nav>
+
+    <main>
+    <!--
+    Sección de contenido principal
+    Descripción: Primer contenedor para explicar nuestro objetivo.
+    -->
+        <div class="contenedor__descr">
+            <div class="contenedor__descr--left">
+                <h1 class="contenedor__descr--left-titulo">Nebula: sistema de gestión de proyectos gamificado</h1>
+            </div>
+            <div class="contenedor__descr-right">
+                <p class="contenedor__descr-texto">Las herramientas de gestión de tareas funcionan pero también agotan. Son frías y muchas veces hacen que lo simple se vuelva pesado.
+                </p>
+                <p class="contenedor__descr-texto">Nebula nace para transformar esta experiencia, fusionando la gamificación y el diseño visual para mitigar esos picos de estrés.</p>
+            </div>
+        </div>
+ <!--
+    Sección de contenido de caracteristicas
+    Descripción: Contenedor para explicar nuestros elementos principales en la órbita del proyecto 
+    (el sol, el planeta y el planeta xs/prioridad).
+    -->
+        <div class="contenedor__pestana">
+            <div class="contenedor__pestana-left">
+                <!--Sección de descripción de elmentos (el sol, el planeta y el planeta xs/prioridad)-->
+                <h2 class="contenedor__descr--left-subtitulo">Caracteristicas</h2>
+                <div class="contenedor__descr--left-botones">
+                  <button class="contenedor__pestana-left-button" id="btnSol">El sol</button>
+                  <button class="contenedor__pestana-left-button" id="btnPlaneta">Los planetas</button>
+                  <button class="contenedor__pestana-left-button"  id="btnUrge">El satélite</button>
+                </div>
+                <div id="content" class="contenedor__descr--left-content"></div>
+            </div>
+            <div class="contenedor__pestana-right">
+                <!--Sección de visión de los elementos en un pestana-->
+                <div class="contenedor__pestana-right pestana">
+                    <div class="item-pestana item-pestana--urgente">
+                        <div class="planet">
+                          <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="item-pestana--urgente-enf">
+                            <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                            <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+                          </video>
+                          <div class="planet-xs">
+                            <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rojo.jpg">
+                              <source src="/galeria/planetas/planeta-rojo.webm" type="video/webm">
+                              <source src="/galeria/planetas/planeta-rojo.mp4" type="video/mp4">
+                            </video>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="item-pestana item-pestana--sol">
+                        <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-marron.jpg">
+                            <source src="/galeria/planetas/planeta-marron.webm" type="video/webm">
+                            <source src="/galeria/planetas/planeta-marron.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="item-pestana item-pestana--planeta">
+                      <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg">
+                          <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                          <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+                      </video>
+                  </div>
+                    
+                </div>
+            </div>
+        </div>
+            
+        <div class="main__footer">
+          <a title="Pagina demo" href="demo.html" class="main__footer-button">Prueba la demo</a>
+        </div>
+
+    </main>
+
+
+  </body>
+</html>

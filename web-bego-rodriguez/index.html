@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta name="description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://berobla.com">
+  <meta property="og:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta property="og:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="og:image" content="https://berobla.com/galeria/nebula.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://berobla.com">
+  <meta property="twitter:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta property="twitter:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="twitter:image" content="https://berobla.com/galeria/nebula.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="icon" href="/galeria/icono.webp" type="image/webp">
+  <link rel="stylesheet" href="/css/styles-home.css">
+  <script src="/js/index.js" defer></script>
+  <title>Nebula: Gestor de Proyectos</title>
+</head>
+  <body>
+    <header>
+    <!--
+      Sección de navegación
+      Descripción: En esta 
+    -->
+      <nav class="nav__list-global">
+        <div class="nav__list-left">
+          <a title="Enlace vacio" href="#" class="nav__link active">Inicio</a>
+          <a title="Pagina detalles" href="html/detalles-proyecto.html" class="nav__link">Conoce el proyecto</a>
+        </div>
+      </nav>
+
+    </header>
+    <!--
+      Contenido principal de la página
+      Descripción: Tenemos separados en 4 secciones el contenido
+          - Frase principal
+          - Elemento sol fijo en el centro
+          - Frame con planetas desordenados
+          - Frase 
+          - Frame planetas ordenados
+              - Ejemplo prioridad urgente
+          - Footer con enlace a la Demo
+
+
+    -->
+    <main class="main__index">
+      <!--Frase principal-->
+      <div class="frame__intro">
+        <h1 class="frame__intro-texto">La galaxia es inmensa, pero nunca caótica.</h1>
+      </div>
+
+      <!--Elemento sol fijo en el centro-->
+      <div class="main__center">
+          <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="frame__video-center">
+            <source src="/galeria/planetas/planeta-marron.webm" type="video/webm">
+            <source src="/galeria/planetas/planeta-marron.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div class="frame__text">
+        <h2>Proyectos complejos, visualmente simples.</h2>
+      </div>
+      <!--Frame con planetas desordenados-->      
+      <div class="frame frame--first">
+              <!--Frase-->      
+        <div class="frame__frase">
+          <p>Menos texto, más visión.
+            <br>
+            Una forma más ligera de gestionar.</p>
+        </div>
+        <div class="frame__perspective">
+          <div class="frame__orbit frame__orbit--up">
+            <div class="frame__element frame__element--empty"></div>
+            <div class="frame__element"> 
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-burd.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-burd.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty">4</div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rojo.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-rojo.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rojo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-marron.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-marron.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-marron.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-gris.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-gris.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-gris.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rosa.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-rosa.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rosa.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty"></div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty">13</div>
+          </div>
+
+          <div class="frame__orbit frame__orbit--mid">
+            <div class="frame__element frame__element--empty"></div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-gris.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-gris.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-gris.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dye.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-dye.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dye.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-burd.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-burd.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rosa.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-rosa.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rosa.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-gris.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-gris.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-gris.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rojo.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-rojo.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rojo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-burd.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-burd.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty"></div>
+          </div>
+
+          <div class="frame__orbit frame__orbit--down">
+            <div class="frame__element--empty"></div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-gris.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-gris.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-gris.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element--empty"></div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dye.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-dye.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dye.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rojo.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-rojo.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rojo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element--empty"></div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rosa.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-rosa.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rosa.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="frame__video">
+                <source src="/galeria/planetas/planeta-burd.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-burd.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element--empty"></div>
+          </div>
+        </div> 
+      </div>
+
+      
+
+      <!--Frame planetas ordenados--> 
+      <div class="frame frame--prioridades">
+        <!--Frame planetas ordenados texto --> 
+        <div class="frame__text-prioridades">
+          <p>Tus prioridades a la vista: detectalas al instante.</p>
+        </div>
+
+        <!--Frame planetas ordenados PLANETAS --> 
+        <div class="frame__perspective">
+          <div class="frame__orbit frame__orbit--prioridades">
+                  <!--La clase EMPTY crea espacio vacion en el grid--> 
+            <div class="frame__element frame__element--empty"></div>
+                  <!--La clase OUT genera un opacity 0 al hacer scroll en punto determinado--> 
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rojo.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-rojo.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rojo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dye.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-dye.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dye.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty"></div>
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dyecolores.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-dyecolores.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dyecolores.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-rosa.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-rosa.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-rosa.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--fixed">
+              <video autoplay loop muted preload="none" poster="/galeria/planetas/planeta-marron.jpg" class="frame__element frame__video">
+                <source src="/galeria/planetas/planeta-marron.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-marron.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-gris.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-gris.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-gris.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-dye.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-dye.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-dye.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty"></div>
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-burd.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-burd.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-burd.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--out">
+              <video   autoplay loop muted preload="none" poster="/galeria/planetas/planeta-azul.jpg" class="frame__element frame__element--out frame__video">
+                <source src="/galeria/planetas/planeta-azul.webm" type="video/webm">
+                <source src="/galeria/planetas/planeta-azul.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="frame__element frame__element--empty"></div>
+          </div>
+        </div> 
+      </div>
+  
+      <!--Main Footer con enlace a la DEMO--> 
+      <div class="main__footer">
+        <p class="main__footer-texto">Cada proyecto tiene su órbita.<br>Pon orden a tu trabajo.</p>
+        <a title="Pagina demo" href="/html/demo.html" class="main__footer-button">Prueba la demo</a>
+      </div>
+    </main>
+  </body>
+</html>

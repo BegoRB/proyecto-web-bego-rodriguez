@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta name="description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://berobla.com">
+  <meta property="og:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta property="og:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="og:image" content="https://berobla.com/galeria/nebula.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://berobla.com">
+  <meta property="twitter:title" content="Nebula: Sistema de Gestión de Proyectos Gamificado">
+  <meta property="twitter:description" content="Nebula es un gestor de proyectos que combina la gamificación y el diseño visual, reduciendo el estrés y haciendo el trabajo más fácil y ameno.">
+  <meta property="twitter:image" content="https://berobla.com/galeria/nebula.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="icon" href="/galeria/icono.webp" type="image/webp">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/index.js" defer></script>
+    <title>Gestión de tareas</title>
+</head>
+<!--
+Descripción: Este archivo HTML contiene la página de presentación del sistema de gestión de tareas.
+
+Estructura general:
+- Encabezado
+- Barra de navegación
+- Contenido principal 
+    - Titulo + Descripcion
+    - Tarjetas de elemento + Carrousel
+-->
+<body>
+  <!-- 
+      Sección de navegación 
+  -->
+  <nav class="nav__list">
+    <div class="nav__list-left">
+      <a title="Enlace demo" href="/html/demo.html" class="nav__link">Mi sistema</a>
+      <a title="Enlace gestión" href="/html/tareas.html" class="nav__link active">Gestionar órbita</a>
+    </div>
+
+  </nav>
+
+  <main class="gestion">
+    <div class="tareas">
+
+      <!--
+      Sección de tareas
+      Descripción: Contenedor principal de gestión de las tareas.
+      -->
+      <div class="tareas__principal">
+        <div class="tareas__principal--header">
+          <span class="tareas__principal--header-titulo">Creación web</span>
+          <button class="new-tarea" id="newTarea">+ Nueva tabla</button>
+        </div>
+    
+        <div class="tareas__principal--contenedor">
+        <!--
+        Sección de tabla
+        Descripción: Tabla de la tarea predeterminada.
+        - Icono de tarea
+        - Tabla tarea
+        -->
+          <div class="tareas__principal--contenedor-tabla" id="tabla-1">
+            <div class="icono-tarea">
+              <picture>
+                <source srcset="/galeria/icono.webp" type="image/webp">
+                <source srcset="/galeria/icono.png" type="image/jpeg">
+                <img class="icono-tarea__img" src="/galeria/icono.png" alt="Icono tarea" loading="lazy">
+              </picture>
+            </div>
+    
+            <table class="tabla">
+              <!--
+              Sección header de la tabla
+              -->
+              <thead>
+                <tr>
+                  <th class="tabla__header primera">                    
+                    <span class="tabla__header primera-descr">Corregir bug en el inicio de sesión</span>
+                    <div class="tabla__conf">
+                      <picture>
+                        <source srcset="/galeria/flecha.webp" type="image/webp">
+                        <source srcset="/galeria/flecha.jpg" type="image/jpeg">
+                        <img src="/galeria/flecha.jpg" class="tabla__conf-menu icono" alt="Editar título" loading="lazy">
+                      </picture>
+                      <ul class="primera-conf-lista">
+                        <li class="tabla__conf-item editar">
+                          <button class="tabla__conf-item editar" aria-label="Editar nombre">
+                            <picture>
+                              <source srcset="/galeria/icono-editar.webp" type="image/webp">
+                              <source srcset="/galeria/icono-editar.png" type="image/jpeg">
+                              <img src="/galeria/icono-editar.png" class="tabla__conf icono ieditar" alt="Icono editar" loading="lazy">
+                            </picture>
+                            Editar nombre
+                          </button>
+                        </li>
+                        <li class="tabla__conf-item borrar">
+                          <button class="tabla__conf-item borrar" aria-label="Borrar tarea">
+                            <picture>
+                              <source srcset="/galeria/icono-delete.webp" type="image/webp">
+                              <source srcset="/galeria/icono-delete.png" type="image/jpeg">
+                              <img src="/galeria/icono-delete.png" class="tabla__conf icono" alt="Icono borrar" loading="lazy">
+                            </picture>
+                            Borrar tarea
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </th>
+                  <th class="tabla__header segunda">Estado</th>
+                  <th class="tabla__header segunda">Tipo</th>
+                  <th class="tabla__header segunda">Entrega</th>
+                </tr>
+              </thead>
+              <!--
+              Sección principal de la tabla
+              - Borrar tarea
+              - Editar tarea
+              - Nombre tarea
+              - Estado
+              - Prioridad
+              - Fecha
+              -->
+              <tbody class="tabla__body">
+                <tr class="tabla__row">
+                  <td class="tabla__cell primera">
+                    <div class="tabla__cell editar">
+                      <button class="icono-delete" aria-label="Eliminar">
+                        <picture>
+                          <source srcset="/galeria/icono-delete.webp" type="image/webp">
+                          <source srcset="/galeria/icono-delete.png" type="image/jpeg">
+                          <img src="/galeria/icono-delete.png" alt="Icono eliminar" loading="lazy">
+                        </picture>
+                      </button>
+                      <button class="icono-editar" aria-label="Editar">
+                        <picture>
+                          <source srcset="/galeria/icono-editar.webp" type="image/webp">
+                          <source srcset="/galeria/icono-editar.png" type="image/png">
+                          <img src="/galeria/icono-editar.png" alt="Icono editar" loading="lazy">
+                        </picture>
+                      </button>
+                    </div>
+                    <input type="text" class="tabla__cell descr" placeholder="Nombre tarea">                  
+                  </td>
+                  <td class="tabla__cell segunda">
+                    <select class="btn btn--priority select-estado">
+                      <option value="en-curso" selected>En Curso</option>
+                      <option value="pendiente">Pendiente</option>
+                      <option value="finalizado">Finalizado</option>
+                    </select>
+                  </td>
+                  <td class="tabla__cell segunda">
+                    <select class="btn btn--priority select-prioridad">
+                      <option value="urge">Urgente</option>
+                      <option value="no-urge" selected>No urgente</option>
+                    </select>
+                  </td>
+                  <td class="tabla__cell segunda">
+                    <input type="date" class="tabla__cell fecha input-fecha">
+                  </td>
+                </tr>
+              </tbody>
+              <!--
+              Sección footer de la tabla
+                -Añadir tarea nueva
+              -->      
+              <tfoot>
+                <tr class="tabla__row">
+                  <td colspan="4" class="tabla__cell-foot--btn">
+                    <button class="add-tarea" type="button">+ Añadir tarea</button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+</body>
+</html>
